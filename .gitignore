@@ -1,0 +1,7 @@
+*.swp
+
+dummy/
+
+## Maybe
+node_modules
+

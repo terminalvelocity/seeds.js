@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+process.title = 'Seeds.js'
+
+var resolve  = require('resolve');
+var program  = require('commander');
+
+var debug    = console.log;
+var cwd      = process.cwd;
+var basepath = cwd();
+
+resolve('seeds-cli', { 
+  basedir: basepath 
+}, function(err, localCLI) {
+  var cli;
+  if (err){
+    cli = require('../lib/cli');
+  } else {
+    cli = require(localCLI);
+  }
+  
+  cli({
+    cliArgs: process.argv.slice(2),
+    inputStream: process.stdin,
+    outputStream: process.stdout
+  });
+  // .then(function(result) {
+  //   var exitCode = typeof result === 'object' ? result.exitCode : result;
+  //   exit(exitCode);
+  // });
+});

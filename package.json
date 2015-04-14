@@ -1,0 +1,41 @@
+{
+  "name": "seeds",
+  "version": "0.0.2",
+  "description": "Seeds is a full-stack framework for rapidly building ambitious ember applications",
+  "bin": {
+    "seeds": "./bin/seeds"
+  },
+  "main": "index.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seedsjs/seeds-cli"
+  },
+  "keywords": [
+    "seeds",
+    "sails",
+    "ember",
+    "framework",
+    "web",
+    "app",
+    "cli"
+  ],
+  "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seedsjs/seeds-cli/issues"
+  },
+  "homepage": "https://github.com/seedsjs/seeds-cli",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "commander": "^2.7.1",
+    "enpeem": "^2.0.1",
+    "mkdirp": "^0.5.0",
+    "multiline": "^1.0.2",
+    "ncp": "^2.0.0",
+    "resolve": "^1.1.6"
+  }
+}
