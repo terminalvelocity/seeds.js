@@ -2,30 +2,81 @@
 
 process.title = 'Seeds.js'
 
+var exit     = require('exit');
+var tree     = require('./tree');
+var chdir    = require('chdir');
+var mkdirp   = require('mkdirp');
 var resolve  = require('resolve');
 var program  = require('commander');
+var spawn    = require('child-process-promise').spawn;
 
+var chalk    = require('chalk');
 var debug    = console.log;
+var ui       = console.log;
 var cwd      = process.cwd;
 var basepath = cwd();
 
 resolve('seeds-cli', { 
-  basedir: basepath 
+  basedir: basepath
 }, function(err, localCLI) {
   var cli;
-  if (err){
-    cli = require('../lib/cli');
+  if (err) {
+    // debug('err', err);
+    clo = require('../lib/clo');
   } else {
     cli = require(localCLI);
   }
   
-  cli({
-    cliArgs: process.argv.slice(2),
-    inputStream: process.stdin,
-    outputStream: process.stdout
-  });
+  var cli = new clo(
+    cliArgs = process.argv.slice(2),
+    inputStream = process.stdin,
+    outputStream = process.stdout
+  );
+  
+  if (cli.args[0] === 'new') {
+    // debug('new');
+    if (cli.args[1] === undefined) {
+      ui(chalk.red('Error:'),'You must supply a name for your Seeds.js Application.')
+      exit(1);
+    }
+
+    ui(chalk.green('Generating a new Seeds.js Application named'), chalk.white(cli.args[1]) +  
+        chalk.green('...'));
+    // debug(cli.cwd());
+    mkdirp(cli.args[1]);
+    chdir(cli.args[1], function() {
+      debug(process.cwd());
+      var opts = { capture: ['stdout','stderr'], cwd: process.cwd() };
+      spawn('../node_modules/.bin/sails', ['new', 'api'], opts)
+        .then(function(result) {
+          debug(result);
+        })
+        .fail(function(err) {
+          console.error(err);
+        })
+        .progress(function(childProcess) {
+          debug('childProcess.pid:', childProcess.pid);
+        });
+
+      spawn('../node_modules/.bin/ember', ['new', 'frontend'], opts)
+        .then(function(result) {
+          debug(result);
+        })
+        .fail(function(err) {
+          console.error(err);
+        })
+        .progress(function(childProcess) {
+          debug('childProcess.pid:', childProcess.pid);
+        });
+    })
+  }
   // .then(function(result) {
   //   var exitCode = typeof result === 'object' ? result.exitCode : result;
+  //   if (exitCode === 0) {
+  //     ui(tree);
+  //   } else {
+  //     ui('Something went wrong');
+  //   }
   //   exit(exitCode);
   // });
 });
