@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "grunt": false,
+    "views": false
+  },
+  "paths": {
+    "public": "assets"
+  },
+  "port": 1776
+}
