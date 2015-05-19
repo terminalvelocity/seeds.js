@@ -8,27 +8,15 @@ var basepath = process.cwd();
 resolve('seeds-cli', {
   basedir: basepath
 }, function(err, localCLI) {
+
   var cli;
   if (err) {
-    clo = require('../lib/cla');
+    CLI = require('../lib/cli');
   } else {
-    cli = require(localCLI);
+    CLI = require(localCLI);
   }
 
-  var cli = new clo(
-    cliArgs = process.argv.slice(2),
-    true
-  );
+  var cli = new CLI(process.argv.slice(2));
 
   cli.command();
-
-  // .then(function(result) {
-  //   var exitCode = typeof result === 'object' ? result.exitCode : result;
-  //   if (exitCode === 0) {
-  //     ui(tree);
-  //   } else {
-  //     ui('Something went wrong');
-  //   }
-  //   exit(exitCode);
-  // });
 });

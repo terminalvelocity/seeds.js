@@ -33,20 +33,13 @@
     "chalk": "^1.0.0",
     "chdir": "0.0.0",
     "child-process-promise": "^1.0.2",
-    "commander": "^2.7.1",
     "ember-cli": "^0.2.3",
-    "ember-cli-scaffold": "0.0.12",
-    "enpeem": "^2.0.1",
     "exit": "^0.1.2",
     "fs-extra-promise": "^0.1.1",
     "graceful-fs": "^3.0.6",
-    "mkdirp": "^0.5.0",
     "mkdirp-then": "^1.0.1",
     "multiline": "^1.0.2",
-    "ncp": "^2.0.4",
     "resolve": "^1.1.6",
-    "sails": "^0.11.0",
-    "sails-disk": "^0.10.7",
-    "semantic-ui-ember": "0.0.1-rc.8"
+    "sails": "^0.11.0"
   }
 }
