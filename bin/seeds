@@ -3,29 +3,20 @@
 process.title = 'Seeds.js'
 
 var resolve  = require('resolve');
-var program  = require('commander');
+var basepath = process.cwd();
 
-var debug    = console.log;
-var cwd      = process.cwd;
-var basepath = cwd();
-
-resolve('seeds-cli', { 
-  basedir: basepath 
+resolve('seeds-cli', {
+  basedir: basepath
 }, function(err, localCLI) {
+
   var cli;
-  if (err){
-    cli = require('../lib/cli');
+  if (err) {
+    CLI = require('../lib/cli');
   } else {
-    cli = require(localCLI);
+    CLI = require(localCLI);
   }
-  
-  cli({
-    cliArgs: process.argv.slice(2),
-    inputStream: process.stdin,
-    outputStream: process.stdout
-  });
-  // .then(function(result) {
-  //   var exitCode = typeof result === 'object' ? result.exitCode : result;
-  //   exit(exitCode);
-  // });
+
+  var cli = new CLI(process.argv.slice(2));
+
+  cli.command();
 });
