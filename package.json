@@ -1,6 +1,6 @@
 {
-  "name": "seeds",
-  "version": "1.0.0",
+  "name": "seeds-cli",
+  "version": "1.0.1",
   "description": "Seeds is a full-stack framework for rapidly building ambitious ember applications",
   "bin": {
     "seeds": "./bin/seeds"
