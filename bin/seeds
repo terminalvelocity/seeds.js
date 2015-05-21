@@ -9,7 +9,7 @@ resolve('seeds-cli', {
   basedir: basepath
 }, function(err, localCLI) {
 
-  var cli;
+  var CLI;
   if (err) {
     CLI = require('../lib/cli');
   } else {

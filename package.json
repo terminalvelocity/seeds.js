@@ -40,6 +40,7 @@
     "mkdirp-then": "^1.0.1",
     "multiline": "^1.0.2",
     "resolve": "^1.1.6",
-    "sails": "^0.11.0"
+    "sails": "^0.11.0",
+    "soil-cli": "^1.2.0"
   }
 }
