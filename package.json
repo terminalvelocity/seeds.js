@@ -1,5 +1,5 @@
 {
-  "name": "seeds-cli",
+  "name": "seeds",
   "version": "1.2.0",
   "description": "Seeds is a full-stack framework for rapidly building ambitious ember applications",
   "bin": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/seedsjs/seeds-cli"
+    "url": "git://github.com/seedsjs/seeds"
   },
   "keywords": [
     "seeds",
@@ -26,9 +26,9 @@
   "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seedsjs/seeds-cli/issues"
+    "url": "https://github.com/seedsjs/seeds/issues"
   },
-  "homepage": "https://github.com/seedsjs/seeds-cli",
+  "homepage": "https://github.com/seedsjs/seeds",
   "dependencies": {
     "chalk": "^1.0.0",
     "ember-cli": "^0.2.3",
