@@ -31,16 +31,10 @@
   "homepage": "https://github.com/seedsjs/seeds-cli",
   "dependencies": {
     "chalk": "^1.0.0",
-    "chdir": "0.0.0",
-    "child-process-promise": "^1.0.2",
     "ember-cli": "^0.2.3",
-    "exit": "^0.1.2",
-    "fs-extra-promise": "^0.1.1",
-    "graceful-fs": "^3.0.6",
-    "mkdirp-then": "^1.0.1",
     "multiline": "^1.0.2",
     "resolve": "^1.1.6",
     "sails": "^0.11.0",
-    "soil-cli": "^1.2.0"
+    "soil-cli": "^1.2.4"
   }
 }
