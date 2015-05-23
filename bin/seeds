@@ -5,7 +5,7 @@ process.title = 'Seeds.js'
 var resolve  = require('resolve');
 var basepath = process.cwd();
 
-resolve('seeds-cli', {
+resolve('seeds', {
   basedir: basepath
 }, function(err, localCLI) {
 
