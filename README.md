@@ -42,7 +42,7 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
 
 
 ## Installation
-`npm install -g seeds-cli`
+`npm install -g seeds`
 
 ## Usage
 
@@ -59,11 +59,6 @@ $ seeds generate <type> [name]
 #### Current Roadmap:
 
 - Scaffolding Generators/API Generators
-	- Basic Semantic-UI Blueprint (ie. forms for scaffolded models, etc..)
-	- Additional UI Components
-- Easy commands for Sails and Ember
-	- `$ seeds serve` spawning API and Frontend servers
+- Additional UI Components
 - Build/Deploy Automation
 - Plugins for Common Use Cases
-- Documentation
-
