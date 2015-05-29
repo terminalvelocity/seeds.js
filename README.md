@@ -5,8 +5,7 @@ Seeds.js - A Full Stack JavaScript Framework
 
 Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**emantic-UI. It is designed for Rapid Application Prototyping.
 
-
-```--
+```
                                                          .
                                               .         ;
                  .              .              ;%     ;;
@@ -37,9 +36,7 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
                           ...;%@@@@@%%:;;;;,..
                     Plant some seeds, watch em grow
                         You reap what you sow
-                        ```
-
-
+```                        
 
 ## Installation
 `npm install -g seeds`
