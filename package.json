@@ -1,6 +1,6 @@
 {
   "name": "seeds",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Seeds is a full-stack framework for rapidly building ambitious ember applications",
   "bin": {
     "seeds": "./bin/seeds"
