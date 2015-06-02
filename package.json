@@ -8,7 +8,23 @@
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "node test.js"
+    "test": "mocha test/",
+    "lint": "eslint -c .eslintrc lib/",
+    "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .js",
+    "doctoc": "doctoc README.md --title '**Soil Cli**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
+    "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
+    "dmn": "dmn gen -f . && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add .npmignore && git commit --no-verify -m'update npmignore'; fi",
+    "gitPull": "git pull --rebase origin master",
+    "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
+    "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run lint && npm test && npm_release public $@; }; f"
+  },
+  "config": {
+    "notes": "important to correct the path of npm so that the git hook doesn't error",
+    "ghooks": {
+      "pre-commit": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run lint-staged",
+      "pre-push": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run dmn && npm run doctoc && npm run lint && npm test",
+      "update": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm install"
+    }
   },
   "repository": {
     "type": "git",
@@ -33,8 +49,17 @@
     "chalk": "^1.0.0",
     "ember-cli": "0.2.5",
     "multiline": "^1.0.2",
+    "rc": "^1.0.3",
     "resolve": "^1.1.6",
     "sails": "^0.11.0",
     "soil-cli": "^1.2.4"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "dmn": "^1.0.10",
+    "doctoc": "^0.13.0",
+    "eslint": "^0.22.1",
+    "ghooks": "^0.3.2",
+    "mocha": "^2.2.5"
   }
 }

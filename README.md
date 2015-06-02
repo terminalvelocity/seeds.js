@@ -36,26 +36,40 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
                           ...;%@@@@@%%:;;;;,..
                     Plant some seeds, watch em grow
                         You reap what you sow
-```                        
+```
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Soil Cli**
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Generates a new project with the supplied name](#generates-a-new-project-with-the-supplied-name)
+  - [Generates boilerplate named [name] of type](#generates-boilerplate-named-name-of-type)
+  - [Current Roadmap:](#current-roadmap)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Installation
 `npm install -g seeds`
 
 ## Usage
 
-#### Generates a new project with the supplied name
+### Generates a new project with the supplied name
 ```
 $ seeds new [name]
 ```
 
-#### Generates boilerplate named [name] of type
+### Generates boilerplate named [name] of type
 ```
 $ seeds generate <type> [name]
 ```
 
-#### Current Roadmap:
+### Current Roadmap:
 
-- Scaffolding Generators/API Generators
-- Additional UI Components
-- Build/Deploy Automation
-- Plugins for Common Use Cases
+- [x] Scaffolding Generators/API Generators
+- [x] Additional UI Components
+- [x] Release automation to speed up release cycle
+- [ ] Refactor new command to be modular
+- [ ] Build/Deploy Automation
+- [ ] Plugins for Common Use Cases

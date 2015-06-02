@@ -1,7 +1,19 @@
 *.swp
-
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.patch
+*.swp
+.DS_store
+pids
+logs
 dummy/
 
 ## Maybe
 node_modules
 
+npm-debug.log
