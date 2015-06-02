@@ -67,7 +67,8 @@ $ seeds generate <type> [name]
 
 ### Current Roadmap:
 
-- Scaffolding Generators/API Generators
-- Additional UI Components
-- Build/Deploy Automation
+- [x] Scaffolding Generators/API Generators
+- [x] Additional UI Components
+- [x] Build/Deploy Automation
+- Refactor new command to be modular
 - Plugins for Common Use Cases
