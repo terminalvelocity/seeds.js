@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.7.0 | 2015-06-02
+
+
 ## v1.6.0 | 2015-06-02
 * clarifies roadmap
 * updates readmes current roadmap
@@ -10,5 +13,6 @@
 
 ### 0.0.0
 Init
+
 
 
