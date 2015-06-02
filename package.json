@@ -8,7 +8,8 @@
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "lint": "/bin/bash -c 'source ./scripts.sh && lint'"
   },
   "repository": {
     "type": "git",
@@ -33,8 +34,12 @@
     "chalk": "^1.0.0",
     "ember-cli": "0.2.5",
     "multiline": "^1.0.2",
+    "rc": "^1.0.3",
     "resolve": "^1.1.6",
     "sails": "^0.11.0",
     "soil-cli": "^1.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^0.22.1"
   }
 }

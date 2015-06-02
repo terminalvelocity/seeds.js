@@ -1,0 +1,17 @@
+.travis.yml
+test/*
+.editorconfig
+.gitignore
+.jscsrc
+.travis.yml
+.git*
+.jshint*
+.npmignore
+.npmrc
+CONTRIBUTING.*
+CHANGELOG.*
+scripts.sh
+npm-debug.log
+.DS_Store
+.eslintrc
+.eslintignore

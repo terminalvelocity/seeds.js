@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-process.title = 'Seeds.js'
+process.title = 'Seeds.js';
 
 var resolve  = require('resolve');
 var basepath = process.cwd();
@@ -8,7 +8,6 @@ var basepath = process.cwd();
 resolve('seeds', {
   basedir: basepath
 }, function(err, localCLI) {
-
   var CLI;
   if (err) {
     CLI = require('../lib/cli');
@@ -16,7 +15,7 @@ resolve('seeds', {
     CLI = require(localCLI);
   }
 
-  var cli = new CLI(process.argv.slice(2));
+  var cli = new CLI(process.argv.slice(2), {debug: true});
 
   cli.command();
 });
