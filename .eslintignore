@@ -1,2 +1,5 @@
 lib/templates
 lib/helpers
+
+# Ignore until refactor
+lib/commands/new.js

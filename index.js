@@ -1,6 +1,4 @@
 var path = require('path');
-var join = path.join;
 
-
-module.exports = require(join(__dirname, 'lib', 'cli'));
+module.exports = require(path.join(__dirname, 'lib', 'cli'));
 
