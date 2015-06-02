@@ -69,6 +69,7 @@ $ seeds generate <type> [name]
 
 - [x] Scaffolding Generators/API Generators
 - [x] Additional UI Components
-- [x] Build/Deploy Automation
-- Refactor new command to be modular
-- Plugins for Common Use Cases
+- [x] Release automation to speed up release cycle
+- [ ] Refactor new command to be modular
+- [ ] Build/Deploy Automation
+- [ ] Plugins for Common Use Cases
