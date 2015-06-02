@@ -15,7 +15,7 @@ resolve('seeds', {
     CLI = require(localCLI);
   }
 
-  var cli = new CLI(process.argv.slice(2), {debug: true});
+  var cli = new CLI(process.argv.slice(2));
 
   cli.command();
 });
