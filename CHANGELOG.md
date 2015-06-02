@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.7.2 | 2015-06-02
+* updates seeds to use soil cli's api method includedBasepath, previously was underscored
+
 ## v1.7.1 | 2015-06-02
 * Remove debug flag and bumps soil cli version to the latest
 
@@ -16,6 +19,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
