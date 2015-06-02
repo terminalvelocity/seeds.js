@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.7.1 | 2015-06-02
+* Remove debug flag and bumps soil cli version to the latest
+
 ## v1.7.0 | 2015-06-02
 
 
@@ -13,6 +16,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
