@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/terminalvelocity/seeds.js.png?label=ready&title=Ready)](https://waffle.io/terminalvelocity/seeds.js)
 Seeds.js - A Full Stack JavaScript Framework
 =====
 
