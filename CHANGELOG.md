@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.7.3 | 2015-06-11
+* Fixes soil-cli version to 1.3.3. Going to be upgrading soil-cli commands before refactoring parts of seeds and don't want it to break production
+* Update README.md
+* Make default options for runExternalCommand more granular
+* Update README.md
+* add waffle.io badge
+
 ## v1.7.2 | 2015-06-02
 * updates seeds to use soil cli's api method includedBasepath, previously was underscored
 
@@ -19,6 +26,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
