@@ -11,7 +11,7 @@
     "test": "mocha test/",
     "lint": "eslint -c .eslintrc lib/",
     "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .js",
-    "doctoc": "doctoc README.md --title '**Soil Cli**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
+    "doctoc": "doctoc README.md --title '**Seeds.js**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
     "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
     "dmn": "dmn gen -f . && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add .npmignore && git commit --no-verify -m'update npmignore'; fi",
     "gitPull": "git pull --rebase origin master",
