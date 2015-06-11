@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var Seeds = require('../index');
+var Seeds = require('../lib/cli');
 
 describe('Array', function(){
   describe('#indexOf()', function(){
@@ -19,8 +19,11 @@ describe('Seeds', function() {
     expect(Seeds).to.be.a('function');
   });
 
-  it('should return help if no args passed in', function() {
-    var cli = new Seeds('');
-    cli.command();
+  it('should have a default configuration', function() {
+    var cli = new Seeds();
+    expect(cli.config.api.name).to.equal('api');
+    expect(cli.config.api.port).to.equal('1776');
+    expect(cli.config.frontend.name).to.equal('frontend');
+    expect(cli.config.frontend.port).to.equal('4200');
   });
 });
