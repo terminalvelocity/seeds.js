@@ -42,7 +42,7 @@ describe('Seeds', function() {
 
 describe('ModelConverter', function() {
   before(function() {
-    mc = require(join('..', 'lib', 'helpers', 'convert-models'));
+    mc = require(join('..', 'lib', 'helpers', 'convertModels'));
     attrs = ['name:text', 'email:string', 'age:integer', 'birthday:datetime', 'friends:array', 'resume:json', 'image:binary', 'newsletter:boolean'];
     emberActual = mc.convert(attrs, 'ember');
     sailsActual = mc.convert(attrs, 'sails');
