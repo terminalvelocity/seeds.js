@@ -1,5 +1,8 @@
 lib/templates
-lib/helpers
+lib/helpers/copy.js
+lib/helpers/camelcase.js
+lib/helpers/animatedBanner.js
+lib/helpers/banner.js
 
 # Ignore until refactor
 lib/commands/new.js
