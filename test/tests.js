@@ -6,6 +6,7 @@ var join = require('path').join;
 
 var mc;
 var cli;
+var help;
 var attrs;
 var aliasesClass;
 var emberActual;
@@ -90,6 +91,7 @@ describe('ModelConverter', function() {
 describe('Aliases', function() {
   before(function() {
     aliasesClass = require(join('..', 'lib', 'settings', 'aliases'));
+    help = ['help'];
   });
 
   it('should be a class function', function() {
@@ -129,7 +131,6 @@ describe('Aliases', function() {
   });
 
   it('should accept flags for help', function() {
-    let help = ['help'];
     let dashH = Seeds.cli(['-h']).args;
     let ddHelp = Seeds.cli(['--help']).args;
     expect(dashH).to.eql(help);
@@ -140,6 +141,11 @@ describe('Aliases', function() {
     let flagOverAlias = Seeds.cli(['n', '--version']).args;
     let flagOA = ['version', '--version'];
     expect(flagOverAlias).to.eql(flagOA);
+  });
+
+  it('should return help if no args are passed in', function() {
+    let noArgs = Seeds.cli().args;
+    expect(noArgs).to.eql(help);
   });
 });
 
