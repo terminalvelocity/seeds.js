@@ -43,9 +43,9 @@
   "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/terminalvelocity/seeds/issues"
+    "url": "https://github.com/terminalvelocity/seeds.js/issues"
   },
-  "homepage": "https://github.com/terminalvelocity/seeds",
+  "homepage": "https://github.com/terminalvelocity/seeds.js",
   "dependencies": {
     "chalk": "^1.0.0",
     "ember-cli": "0.2.5",
