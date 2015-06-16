@@ -1,0 +1,17 @@
+{
+  "name": "<%= appName %>",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "ember-cli": "^0.2.5",
+    "sails": "^0.11.0",
+  },
+  "keywords": [
+    "seeds.js",
+    "ember",
+    "sails"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
