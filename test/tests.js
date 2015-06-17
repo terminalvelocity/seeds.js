@@ -25,6 +25,7 @@ describe('Seeds', function () {
     expect(cli.config.sails.port).to.equal('1776');
     expect(cli.config.ember[0].name).to.equal('frontend');
     expect(cli.config.ember[0].port).to.equal('4200');
+    expect(cli.config.debug).to.equal(false);
   });
 });
 
