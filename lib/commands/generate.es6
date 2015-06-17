@@ -13,7 +13,7 @@ module.exports = function(cli) {
   let attrsArr      = cli.args.slice(3);
   let attrMap       = new Map();
 
-  if (fs.existsSync('.seedsrc')) {
+  if (fs.existsSync(cli.apiDir) && fs.existsSync(cli.feDir) || fs.existsSync('.seedsrc')) {
     if (implementedGenerators.indexOf(generatorType) > -1) {
       if (attrsArr.length > 0) {
         cli.debug('we have attrs', attrsArr);
