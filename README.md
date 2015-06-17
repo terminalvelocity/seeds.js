@@ -46,8 +46,10 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
 - [Installation](#installation)
 - [Usage](#usage)
   - [Generates a new project with the supplied name](#generates-a-new-project-with-the-supplied-name)
-  - [Generates boilerplate named [name] of type](#generates-boilerplate-named-name-of-type)
-  - [Current Roadmap:](#current-roadmap)
+  - [Run API Server at 1776 and Frontend at 4200](#run-api-server-at-1776-and-frontend-at-4200)
+  - [Generates boilerplate of <kind> named [name]](#generates-boilerplate-of-kind-named-name)
+    - [Currently only scaffold generator is available.](#currently-only-scaffold-generator-is-available)
+- [Note](#note)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
