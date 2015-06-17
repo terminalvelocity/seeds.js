@@ -61,16 +61,23 @@ Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**
 $ seeds new [name]
 ```
 
-### Generates boilerplate named [name] of type
+### Run API Server at 1776 and Frontend at 4200
 ```
-$ seeds generate <type> [name]
+$ seeds serve
 ```
 
-### Current Roadmap:
+### Generates boilerplate of <kind> named [name]
+```
+$ seeds generate <kind> [name] <attrs:type>
+```
 
-- [x] Scaffolding Generators/API Generators
-- [x] Additional UI Components
-- [x] Release automation to speed up release cycle
-- [ ] Refactor new command to be modular
-- [ ] Build/Deploy Automation
-- [ ] Plugins for Common Use Cases
+#### Currently only scaffold generator is available.
+
+```
+$ seeds generate scaffold user name:string email:string age:number birthday:date newsletter:boolean
+```
+
+
+## Note
+
+Seeds.js uses tagged releases. The latest tagged version is the latest version available on NPM. Master is dev master branch.
