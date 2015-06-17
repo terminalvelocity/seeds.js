@@ -7,3 +7,4 @@ lib/commands/serve.js
 lib/commands/version.js
 lib/helpers/convertModels.js
 lib/settings/aliases.js
+lib/templates/*
