@@ -8,18 +8,29 @@
 
 module.exports = {
 
-  ember: new Map([['text', 'string'], ['integer', 'number'], ['float', 'number'], ['datetime', 'date'], ['binary', 'string'], ['array', ''], ['json', '']]),
+  ember: new Map([
+    ['text', 'string'],
+    ['integer', 'number'],
+    ['float', 'number'],
+    ['datetime', 'date'],
+    ['binary', 'string'],
+    ['array', ''],
+    ['json', '']
+  ]),
 
-  sails: new Map([['number', 'float'], ['datetime', 'date']]),
+  sails: new Map([
+    ['number', 'float'],
+    ['datetime', 'date']
+  ]),
 
-  convert: function convert(attributes, to) {
+  convert: function(attributes, to) {
     var attributesCopy = attributes.slice(0);
-    for (var i in attributesCopy) {
+    for (let i in attributesCopy) {
       if (attributesCopy.hasOwnProperty(i)) {
         var attrArray = attributesCopy[i].split(':');
         if (attrArray.length > 1) {
           var attrType = attrArray.pop();
-          attrArray.push(this[to].has(attrType) ? '' + this[to].get(attrType) : '' + attrType);
+          attrArray.push(this[to].has(attrType) ? `${this[to].get(attrType)}` : `${attrType}`);
           attributesCopy[i] = !attrArray[1] ? attrArray.join('') : attrArray.join(':');
         }
       }

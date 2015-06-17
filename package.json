@@ -17,7 +17,9 @@
     "dmn": "dmn gen -f . && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add .npmignore && git commit --no-verify -m'update npmignore'; fi",
     "gitPull": "git pull --rebase origin master",
     "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
-    "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run lint && npm test && npm_release public $@; }; f"
+    "watch": "ls -d lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs ./node_modules/.bin/babel -d ./ -w",
+    "build": "ls -d test/* lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs ./node_modules/.bin/babel -d ./",
+    "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run build-es5 && npm run lint && npm test && npm_release public $@; }; f"
   },
   "config": {
     "notes": "important to correct the path of npm so that the git hook doesn't error",
