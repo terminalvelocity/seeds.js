@@ -1,8 +1,9 @@
-lib/templates
-lib/helpers/copy.js
-lib/helpers/camelcase.js
-lib/helpers/animatedBanner.js
-lib/helpers/banner.js
-
-# Ignore until refactor
+lib/helpers/*
+lib/cli.js
+lib/commands/generate.js
+lib/commands/help.js
 lib/commands/new.js
+lib/commands/serve.js
+lib/commands/version.js
+lib/helpers/convertModels.js
+lib/settings/aliases.js
