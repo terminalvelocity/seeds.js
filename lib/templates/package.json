@@ -1,10 +1,12 @@
 {
-  "name": "<%= appName %>",
+  "name": "seed",
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "sails-generate-seeds-backend": "^1.1.1",
+    "sails-generate-seeds-frontend": "^1.1.3",
     "ember-cli": "^0.2.5",
-    "sails": "^0.11.0",
+    "sails": "^0.11.0"
   },
   "keywords": [
     "seeds.js",
