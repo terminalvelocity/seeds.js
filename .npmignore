@@ -15,5 +15,5 @@ npm-debug.log
 .DS_Store
 .eslintrc
 .eslintignore
-.es6
+*.es6
 test/
