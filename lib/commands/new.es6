@@ -1,9 +1,7 @@
 var join = require('path').join;
 var copy = require('fs-extra').copySync;
 var child = require('child_process');
-// var spawn = child.spawn;
 var spawnSync = child.spawnSync;
-// var exec = child.exec;
 
 module.exports = function(cli) {
   var appName = cli.args[1];
