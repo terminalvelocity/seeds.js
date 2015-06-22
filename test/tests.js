@@ -122,6 +122,12 @@ describe('Aliases', function () {
     expect(n).to.eql(newArg);
   });
 
+  it('should accept alias for install', function () {
+    var newArg = ['install'];
+    var n = Seeds.cli(['i']).args;
+    expect(n).to.eql(newArg);
+  });
+
   it('should accept flags for version', function () {
     var dashV = Seeds.cli(['-v']).args;
     var ddVersion = Seeds.cli(['--version']).args;
