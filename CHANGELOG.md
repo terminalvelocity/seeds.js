@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.1 | 2015-06-24
+* fixes output of install command to show only which directory inside the current directory we are installing to instead of the absolute path
+* adds test for install alias
+* adds install command + alias 'i'
+
 ## v2.0.0 | 2015-06-19
 * changes release hooks babel call from build-es5 to build
 * adds *.es6 to npmignore
@@ -68,6 +73,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
