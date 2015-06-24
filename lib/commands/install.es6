@@ -1,6 +1,7 @@
 var child = require('child_process');
 var spawnSync = child.spawnSync;
 var join = require('path').join;
+var parse = require('path').parse;
 
 module.exports = function(cli) {
   var args = cli.args.slice(1);
@@ -21,7 +22,7 @@ module.exports = function(cli) {
   var currDir = dirMap.get(installer);
 
   cli.debug(command[0], ...command.slice(1), currDir);
-  cli.ui(`Installing ${plugin.white()} into ${currDir.white()}...`);
+  cli.ui(`Installing ${plugin.white()} into ${parse(currDir).name.white()}...`);
 
   spawnSync(command[0], command.slice(1), {cwd: currDir});
   cli.ui('Installation complete!');
