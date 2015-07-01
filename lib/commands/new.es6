@@ -19,8 +19,8 @@ module.exports = function(cli) {
     }
 
     cli.ui('Generating a new Seed named'.green(), appName.white() + '...'.green());
-    cli.mkdir(feDir);
-    return cli.mkdir(apiDir);
+    cli.mkdir(join(feDir, 'node_modules', '.bin'));
+    return cli.mkdir(join(apiDir, 'node_modules', '.bin'));
   };
 
   var bootstrapApp = function() {
@@ -36,16 +36,54 @@ module.exports = function(cli) {
   var setupSails = function() {
     cli.debug('setupSails');
 
+    var sailsModules = [
+      join('.bin', 'sails'),
+      join('.bin', 'rc'),
+      'include-all',
+      'lodash',
+      'pluralize',
+      'rc',
+      'sails',
+      'sails-disk',
+      'sails-generate-ember-blueprints',
+      'sails-hook-apianalytics',
+      'sails-hook-autoreload',
+      'sails-hook-dev'
+    ];
     spawnSync(join(appDir, 'node_modules', '.bin', 'sails'), ['generate', 'seeds-backend'], {cwd: apiDir});
-    spawnSync('npm', ['install'], {cwd: apiDir});
+    sailsModules.forEach(function(pkg) {
+      copy(join(appDir, 'node_modules', pkg), join(apiDir, 'node_modules', pkg));
+    });
     return;
   };
 
   var setupEmber = function() {
     cli.debug('setupEmber');
 
+    var emberModules = [
+      join('.bin', 'ember'),
+      'broccoli-asset-rev',
+      'ember-cli',
+      'ember-cli-app-version',
+      'ember-cli-babel',
+      'ember-cli-content-security-policy',
+      'ember-cli-dependency-checker',
+      'ember-cli-htmlbars',
+      'ember-cli-ic-ajax',
+      'ember-cli-inject-live-reload',
+      'ember-cli-qunit',
+      'ember-cli-seeds-scaffold',
+      'ember-cli-uglify',
+      'ember-data',
+      'ember-disable-proxy-controllers',
+      'ember-export-application-global',
+      'semantic-ui-ember'
+    ];
+
     spawnSync(join(appDir, 'node_modules', '.bin', 'sails'), ['generate', 'seeds-frontend'], {cwd: feDir});
-    spawnSync('npm', ['install'], {cwd: feDir});
+    emberModules.forEach(function(pkg) {
+      copy(join(appDir, 'node_modules', pkg), join(feDir, 'node_modules', pkg));
+    });
     copy(join(appDir, 'node_modules', 'sails-generate-seeds-frontend', 'templates', 'bower_components'), join(feDir, 'bower_components'));
     return;
   };
