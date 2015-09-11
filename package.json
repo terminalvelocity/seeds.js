@@ -8,7 +8,7 @@
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "babel test/tests.es6 -o tests.js | mocha test/",
+    "test": "babel test/tests.es6 -o test/tests.js && mocha test/",
     "watch": "babel src --out-dir lib --watch",
     "lint": "eslint -c .eslintrc src/**/*.es6",
     "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.es6$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc",
