@@ -3,17 +3,17 @@
 
 process.title = 'Seeds.js';
 
-const resolve  = require('resolve');
-const basepath = process.cwd();
+var resolve  = require('resolve');
+var basepath = process.cwd();
 
 resolve('seeds', {basedir: basepath}, function(err, localCLI) {
-  let CLI;
+  var CLI;
   if (err) {
     CLI = require('../lib/cli');
   } else {
     CLI = require(localCLI);
   }
-  let cli = new CLI(process.argv.slice(2));
+  var cli = new CLI(process.argv.slice(2));
 
   cli.command();
 });
