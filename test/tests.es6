@@ -91,7 +91,7 @@ describe('ModelConverter', function() {
 
 describe('Aliases', function() {
   before(function() {
-    aliasesClass = require(join('..', 'lib', 'settings', 'aliases'));
+    aliasesClass = require(join('..', 'lib', 'helpers', 'aliases'));
     help = ['help'];
   });
 

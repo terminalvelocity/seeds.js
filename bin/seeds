@@ -1,20 +1,18 @@
 #!/usr/bin/env node
+'use strict';
 
 process.title = 'Seeds.js';
 
 var resolve  = require('resolve');
 var basepath = process.cwd();
 
-resolve('seeds', {
-  basedir: basepath
-}, function(err, localCLI) {
+resolve('seeds', {basedir: basepath}, function(err, localCLI) {
   var CLI;
   if (err) {
     CLI = require('../lib/cli');
   } else {
     CLI = require(localCLI);
   }
-
   var cli = new CLI(process.argv.slice(2));
 
   cli.command();
