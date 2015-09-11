@@ -2,7 +2,7 @@
 
 var Cli = require('soil-cli');
 var join = require('path').join;
-var aliases = require(join(__dirname, 'settings', 'aliases'));
+var aliases = require(join(__dirname, 'helpers', 'aliases'));
 
 class SeedsCLI extends Cli {
 

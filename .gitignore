@@ -12,6 +12,7 @@
 pids
 logs
 dummy/
+lib/
 
 ## Maybe
 node_modules

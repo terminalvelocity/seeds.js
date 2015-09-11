@@ -1,12 +1,2 @@
-lib/helpers/*
-lib/cli.js
-lib/commands/generate.js
-lib/commands/help.js
-lib/commands/install.js
-lib/commands/new.js
-lib/commands/serve.js
-lib/commands/version.js
-lib/helpers/convertModels.js
-lib/settings/aliases.js
-lib/templates/*
-test/tests.js
+lib/*
+test/*

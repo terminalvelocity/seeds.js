@@ -8,16 +8,16 @@
   "main": "index.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "mocha test/",
-    "watch": "ls -d test/* lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs babel -d ./ -w",
-    "lint": "eslint -c .eslintrc lib/",
-    "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .js",
+    "test": "babel test/tests.es6 -o tests.js | mocha test/",
+    "watch": "babel src --out-dir lib --watch",
+    "lint": "eslint -c .eslintrc src/**/*.es6",
+    "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.es6$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc",
     "doctoc": "doctoc README.md --title '**Seeds.js**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
     "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
     "dmn": "dmn gen -f . && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add .npmignore && git commit --no-verify -m'update npmignore'; fi",
     "gitPull": "git pull --rebase origin master",
     "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
-    "build": "ls -d test/* lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs babel -d ./",
+    "build": "babel src --out-dir lib",
     "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run build && npm run lint && npm test && npm_release public $@; }; f"
   },
   "config": {

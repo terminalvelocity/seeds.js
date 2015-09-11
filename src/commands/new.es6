@@ -1,14 +1,14 @@
-var join = require('path').join;
-var copy = require('fs-extra').copySync;
-var child = require('child_process');
-var spawnSync = child.spawnSync;
+const join = require('path').join;
+const copy = require('fs-extra').copySync;
+const child = require('child_process');
+const spawnSync = child.spawnSync;
 
 module.exports = function(cli) {
-  var appName = cli.args[1];
-  var appDir = join(cli.cwd, appName);
-  var apiDir = join(appDir, cli.apiName);
-  var feDir = join(appDir, cli.feName);
-  var templatesPath = join(cli.includedBasepath, 'lib', 'templates');
+  const appName = cli.args[1];
+  const appDir = join(cli.cwd, appName);
+  const apiDir = join(appDir, cli.apiName);
+  const feDir = join(appDir, cli.feName);
+  const templatesPath = join(cli.includedBasepath, 'lib', 'templates');
 
   var createAppFolder = function() {
     cli.debug('createAppFolder', appName);

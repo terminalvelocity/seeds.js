@@ -1,7 +1,7 @@
-var fs = require('fs');
-var join = require('path').join;
+const fs = require('fs');
+const join = require('path').join;
 
-module.exports = function(cli) {
+module.exports = cli => {
   cli.debug('start serve', cli.args);
 
   if (fs.existsSync(cli.apiDir) && fs.existsSync(cli.feDir) || fs.existsSync('.seedsrc')) {

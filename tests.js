@@ -90,7 +90,7 @@ describe('ModelConverter', function () {
 
 describe('Aliases', function () {
   before(function () {
-    aliasesClass = require(join('..', 'lib', 'helpers', 'aliases'));
+    aliasesClass = require(join('..', 'lib', 'helper', 'aliases'));
     help = ['help'];
   });
 

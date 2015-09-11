@@ -17,3 +17,4 @@ npm-debug.log
 .eslintignore
 *.es6
 test/
+src/
