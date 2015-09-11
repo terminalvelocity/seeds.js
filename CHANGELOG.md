@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.0.2 | 2015-09-11
+* Reverts bin/seeds. Want cli to work with version of node older than 4.
+* move banner.es6 to lib to skip transpile. Babel does not preserve spacing of comments, also removes sails/ember from deps since it's not needed
+* remove accidental tests.js from project root, update package.json test script and fixed typo in tests.es6
+* Add dummy to npm ignore
+* Template strings in node4 doesn't work 100% as expected. Reverted to old version of banner using multiline
+* Cleans up repo. Moves pre-transpiled files to src folder, merge lib/settings and lib/helpers folder, updates package.json scripts to new setup
+* Updates bin/seeds to es6
+* removes ./node_modules/.bin from build/watch since it's not required when using npm run <command>, via @IanVS
+
 ## v2.0.1 | 2015-06-24
 * fixes output of install command to show only which directory inside the current directory we are installing to instead of the absolute path
 * adds test for install alias
@@ -73,6 +83,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
