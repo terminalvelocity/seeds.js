@@ -12,24 +12,30 @@ class SeedsCLI extends Cli {
 
     this.nodeDir = join(this.cwd, 'node_modules');
 
-    this.feName = this.config.ember[0].name;
-    this.feDir =  join(this.cwd, this.config.ember[0].name);
+    this.feName = this.config.apps.ember[0].name;
+    this.feDir =  join(this.cwd, this.feName);
 
-    this.apiName = this.config.sails.name;
-    this.apiDir = join(this.cwd, this.config.sails.name);
+    this.apiName = this.config.apps.sails[0].name;
+    this.apiDir = join(this.cwd, this.apiName);
     aliases.parse(this);
   }
 
   get config() {
     return require('rc')('seeds', {
-      sails: {
-        name: 'api',
-        port: '1776'
+      apps: {
+        sails: [
+          {
+            name: 'api',
+            port: 1776
+          }
+        ],
+        ember: [
+          {
+            name: 'frontend',
+            port: 4200
+          }
+        ]
       },
-      ember: [{
-        name: 'frontend',
-        port: '4200'
-      }],
       debug: false
     });
   }
