@@ -12,9 +12,5 @@
 pids
 logs
 dummy/
-lib/
-
-## Maybe
 node_modules
-
 npm-debug.log
