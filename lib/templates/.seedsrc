@@ -10,10 +10,6 @@
       {
         "name": "frontend",
         "port": 4200
-      },
-      {
-        "name": "admin",
-        "port": 4201
       }
     ]
   },
