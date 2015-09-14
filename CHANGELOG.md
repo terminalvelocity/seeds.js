@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.0.3 | 2015-09-14
+* Reverts seeds version.
+* Ember 2.0 compatible.
+* Ember 2.0 compatible.
+* preps for multiple front and backend apps as well as utilizing rails as a backend
+
 ## v2.0.2 | 2015-09-11
 * Reverts bin/seeds. Want cli to work with version of node older than 4.
 * move banner.es6 to lib to skip transpile. Babel does not preserve spacing of comments, also removes sails/ember from deps since it's not needed
@@ -83,6 +89,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
