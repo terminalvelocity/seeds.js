@@ -48,6 +48,7 @@
   },
   "homepage": "https://github.com/terminalvelocity/seeds.js",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "fs-extra": "^0.19.0",
     "lodash.partition": "^3.1.1",
     "lodash.startswith": "^3.0.1",
