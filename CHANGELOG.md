@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.4 | 2015-09-16
+* Adds versions table and help output
+* Fixes npm run build and watch to only compile .es6 files and copy over other files to lib from src. Currently does not copy .seedsrc file. May change the .seedsrc file creation process
+
 ## v2.0.3 | 2015-09-14
 * Reverts seeds version.
 * Ember 2.0 compatible.
@@ -89,6 +93,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
