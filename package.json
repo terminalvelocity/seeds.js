@@ -10,7 +10,7 @@
   "scripts": {
     "build": "babel src --out-dir lib -x '.es6' -D ",
     "watch": "babel src --out-dir lib -x '.es6' -D --watch",
-    "test": "babel test/tests.es6 -o test/tests.js && mocha test/",
+    "test": "npm run build && babel test/tests.es6 -o test/tests.js && mocha test/",
     "lint": "eslint -c .eslintrc src/**/*.es6",
     "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.es6$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc",
     "doctoc": "doctoc README.md --title '**Seeds.js**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
