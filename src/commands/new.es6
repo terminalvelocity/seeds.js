@@ -26,7 +26,8 @@ module.exports = function(cli) {
   var bootstrapApp = function() {
     cli.debug('bootstrapApp');
 
-    copy(join(templatesPath, '.seedsrc'), join(appDir, '.seedsrc'));
+    copy(join(templatesPath, 'gitignore'), join(appDir, '.gitignore'));
+    copy(join(templatesPath, 'seedsrc'), join(appDir, '.seedsrc'));
     copy(join(templatesPath, 'package.json'), join(appDir, 'package.json'), {clobber: true});
 
     spawnSync('npm', ['install'], {cwd: join(cli.cwd, appName)});
