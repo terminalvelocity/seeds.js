@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.6 | 2015-09-23
+* add lib to .gitignore
+* Adds gitignore to templates for seeds new command. Changed .seedsrc to seedsrc in templates so babel will see it and changed new command to copy over the unhidden version into a hidden version, does same for .gitignore. Removes Lib and fixes #62
+
 ## v2.0.5 | 2015-09-17
 * Cleans up commands.es6 to use an array of command names to export
 
@@ -96,6 +100,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
