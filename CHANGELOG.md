@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.7 | 2016-02-09
+* Adds init command to install API and Frontend dependencies for a seeds project
+
 ## v2.0.6 | 2015-09-23
 * add lib to .gitignore
 * Adds gitignore to templates for seeds new command. Changed .seedsrc to seedsrc in templates so babel will see it and changed new command to copy over the unhidden version into a hidden version, does same for .gitignore. Removes Lib and fixes #62
@@ -100,6 +103,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
