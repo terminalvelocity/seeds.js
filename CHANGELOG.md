@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.0 | 2016-02-11
+* Adds model generator to seeds. Creates API model and controller as well as Ember Model.
+
 ## v2.0.7 | 2016-02-09
 * Adds init command to install API and Frontend dependencies for a seeds project
 
@@ -103,6 +106,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
