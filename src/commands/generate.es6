@@ -7,7 +7,7 @@ var convertModels = require(join('..', 'helpers', 'convertModels'));
 module.exports = function(cli) {
   cli.debug('generate command start');
 
-  let implementedGenerators = ['scaffold'];
+  let implementedGenerators = ['scaffold', 'model'];
   let generatorType = cli.args[1];
   let resourceName  = cli.args[2];
   let attrsArr      = cli.args.slice(3);
@@ -38,7 +38,7 @@ module.exports = function(cli) {
       var emberAttrs = convertModels.convert(attrsArr, 'ember');
       cli.debug(emberAttrs);
 
-      let emberGenerateCommand = [cli.args[0], 'scaffold', resourceName];
+      let emberGenerateCommand = [cli.args[0], generatorType, resourceName];
       Array.prototype.push.apply(emberGenerateCommand, emberAttrs);
       cli.runExternalCommand(join(cli.feDir, 'node_modules', '.bin', 'ember'), emberGenerateCommand, {cwd: `${cli.feDir}`});
     } else {
