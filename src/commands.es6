@@ -1,7 +1,9 @@
 'use strict';
 
-const commands = ['new', 'help', 'version', 'serve', 'generate', 'install', 'init'];
+const fs = require('fs');
+const path = require('path');
+const commands = fs.readdirSync(`${__dirname}/commands`);
 
-commands.map((command) => {
-  module.exports[command] = require(`./commands/${command}`);
+commands.forEach((command) => {
+  module.exports[command.slice(0, -3)] = require(path.resolve(`${__dirname}/commands/${command}`));
 });
