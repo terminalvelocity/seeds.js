@@ -7,7 +7,7 @@ var convertModels = require(join('..', 'helpers', 'convertModels'));
 module.exports = function(cli) {
   cli.debug('generate command start');
 
-  let implementedGenerators = ['scaffold', 'model'];
+  let implementedGenerators = ['scaffold', 'model', 'resource'];
   let generatorType = cli.args[1];
   let resourceName  = cli.args[2];
   let attrsArr      = cli.args.slice(3);
