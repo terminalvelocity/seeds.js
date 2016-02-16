@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.1 | 2016-02-15
+* Adds resource generator to seeds. seeds g resource modelName attrs:type
+
 ## v2.1.0 | 2016-02-11
 * Adds model generator to seeds. Creates API model and controller as well as Ember Model.
 
@@ -106,6 +109,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
