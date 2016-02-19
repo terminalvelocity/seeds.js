@@ -1,7 +1,9 @@
 'use strict';
 
-var startsWith = require('lodash.startswith');
-var partition = require('lodash.partition');
+const startsWith = require('lodash.startswith');
+const partition = require('lodash.partition');
+const includes = require('lodash/collection/includes');
+const commands = require('../commands');
 
 class Aliases {
   constructor(cli) {
@@ -10,6 +12,7 @@ class Aliases {
     this._helpIfNone();
     this.checkFlags();
     this.checkAlias();
+    this.checkCommands();
   }
 
   get aliasMap() {
@@ -20,7 +23,8 @@ class Aliases {
       ['server', 'serve'],
       ['lift', 'serve'],
       ['up', 'serve'],
-      ['i', 'install']
+      ['i', 'install'],
+      ['b', 'build']
     ]);
   }
 
@@ -57,6 +61,13 @@ class Aliases {
 
   updateArgs() {
     this.cli.args = this.args;
+  }
+
+  checkCommands() {
+    let keys = Object.keys(commands);
+    if (!includes(keys, this.args[0])) {
+      this.cli.args = ['help'];
+    }
   }
 
   static parse(cli) {

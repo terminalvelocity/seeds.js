@@ -153,4 +153,9 @@ describe('Aliases', function () {
     var noArgs = Seeds.cli().args;
     expect(noArgs).to.eql(help);
   });
+
+  it('should return help if command passed in doesnt match a command', function () {
+    var noMatchArgs = Seeds.cli(['doesnotexist']).args;
+    expect(noMatchArgs).to.eql(help);
+  });
 });

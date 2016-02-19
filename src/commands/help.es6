@@ -4,12 +4,15 @@ aliases.push(
   ['n', 'new'],
   ['g', 'generate'],
   ['s, up, lift, server', 'serve'],
-  ['i', 'install']
+  ['i', 'install'],
+  ['b', 'build']
 );
 
 module.exports = function(cli) {
   cli.ui(`${'Usage:'.cyan()}
   seeds ${'new'.white()} [name]                            # Generates a new project with the supplied name.
+  seeds ${'init'.white()}                                  # Installs all the dependencies for your Ember and API server.
+  seeds ${'build'.white()}                                 # Builds your Ember app into the API Server's Asset Folder
   seeds ${'serve'.white()}                                 # Run Frontend at 4200 and API server at 1776.
   seeds ${'generate'.white()} <kind> [name] <attrs:type>   # Generates boilerplate for <kind> of [name].
   seeds ${'install'.white()} ${'ember'.red()} <ember-addon>           # Installs <ember-addon> in frontend Ember app.

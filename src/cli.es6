@@ -1,14 +1,16 @@
 'use strict';
 
-var Cli = require('soil-cli');
-var join = require('path').join;
-var aliases = require(join(__dirname, 'helpers', 'aliases'));
+const Cli = require('soil-cli');
+const join = require('path').join;
+const aliases = require(join(__dirname, 'helpers', 'aliases'));
+const logger = require('./helpers/logger');
 
 class SeedsCLI extends Cli {
 
   constructor(args, options) {
     super(args, options);
     this.debugFlag = this.config.debug;
+    this.ui = console.log;
 
     this.nodeDir = join(this.cwd, 'node_modules');
 
@@ -50,7 +52,9 @@ class SeedsCLI extends Cli {
     return this.spawn(command, args, options)
       .progress(function(childProcess) {
         childProcess.stdout.on('data', function (data) {
-          console.log(`${data.toString()}`);
+          if (data.toString().slice(0, 5) === 'info:') data = data.toString().substr(5);
+          console.log(data.toString());
+          logger.log('info', `${data.toString()}`);
         });
         childProcess.stderr.on('data', function (data) {
           console.log(`${data.toString()}`);
