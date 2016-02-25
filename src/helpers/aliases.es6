@@ -20,7 +20,9 @@ class Aliases {
       ['server', 'serve'],
       ['lift', 'serve'],
       ['up', 'serve'],
-      ['i', 'install']
+      ['i', 'install'],
+      ['b', 'build'],
+      ['h', 'help']
     ]);
   }
 
