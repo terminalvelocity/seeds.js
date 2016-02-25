@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.2 | 2016-02-25
+* Modified help command. Also, adds alias for help & build commands
+* Adds build command. Build creates a timestamped directory in the builds dir, copies api server, then runs ember build command with output-dir set to timestamped api server's asset dir. Adds mkdirp as dep. Updates default seeds .gitignore file to ignore the builds directory
+* Refactored commands.es6 to automatically export all files found in the commands dir as CLI commands
+
 ## v2.1.1 | 2016-02-15
 * Adds resource generator to seeds. seeds g resource modelName attrs:type
 
@@ -109,6 +114,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
