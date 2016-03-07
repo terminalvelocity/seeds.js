@@ -1,0 +1,19 @@
+{
+  "name": "seed",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "sails-generate-seeds-backend": "~1.1.1",
+    "sails-generate-seeds-frontend": "~2.0.3",
+    "ember-cli": "^1.13.8",
+    "sails": "^0.11.0"
+  },
+  "keywords": [
+    "seeds.js",
+    "ember",
+    "sails"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": ""
+}
