@@ -1,3 +1,5 @@
+/*eslint no-undefined:0 */
+const bower = require('bower');
 const join = require('path').join;
 const copy = require('fs-extra').copySync;
 const child = require('child_process');
@@ -47,7 +49,7 @@ module.exports = function(cli) {
 
     spawnSync(join(appDir, 'node_modules', '.bin', 'sails'), ['generate', 'seeds-frontend'], {cwd: feDir});
     spawnSync('npm', ['install'], {cwd: feDir});
-    copy(join(appDir, 'node_modules', 'sails-generate-seeds-frontend', 'templates', 'bower_components'), join(feDir, 'bower_components'));
+    bower.commands.install(undefined, undefined, {cwd: feDir});
     return;
   };
 

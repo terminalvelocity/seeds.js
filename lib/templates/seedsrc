@@ -1,17 +1,4 @@
 {
-  "apps": {
-    "sails": [
-      {
-        "name": "api",
-        "port": 1776
-      }
-    ],
-    "ember": [
-      {
-        "name": "frontend",
-        "port": 4200
-      }
-    ]
-  },
+  "apps": {"sails": [{ "name": "api", "port": 1776 }], "ember": [{ "name": "frontend", "port": 4200 }]},
   "debug": false
 }
