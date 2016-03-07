@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.4 | 2016-03-06
+* changes templates package.json file to use tilde (minor level matcher) for generators
+
 ## v2.1.3 | 2016-02-25
 
 
@@ -117,6 +120,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
