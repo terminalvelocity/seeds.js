@@ -49,7 +49,7 @@ module.exports = function(cli) {
     cli.debug('setupSails');
 
     spawnSync(join(appDir, 'node_modules', '.bin', 'sails'), ['generate', 'seeds-backend'], {cwd: apiDir});
-    spawnSync('npm', ['install'], {cwd: apiDir});
+    spawnSync('npm', ['--cache-min', '9999999', 'install'], {cwd: apiDir});
     return;
   };
 
@@ -57,7 +57,7 @@ module.exports = function(cli) {
     cli.debug('setupEmber');
 
     spawnSync(join(appDir, 'node_modules', '.bin', 'sails'), ['generate', 'seeds-frontend'], {cwd: feDir});
-    spawnSync('npm', ['install'], {cwd: feDir});
+    spawnSync('npm', ['--cache-min', '9999999', 'install'], {cwd: feDir});
     bower.commands.install(undefined, undefined, {cwd: feDir});
     return;
   };
