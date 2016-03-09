@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "sails-generate-seeds-backend": "~1.1.5",
-    "sails-generate-seeds-frontend": "~2.1.0",
+    "sails-generate-seeds-frontend": "~2.1.1",
     "ember-cli": "~2.4.1",
     "sails": "^0.12.1"
   },
