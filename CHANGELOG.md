@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.1 | 2016-03-09
+* bump seeds-frontend and backend versions
+* bumps to latest seeds-frontend package
+* update seeds-backend package and sails dep
+* remove resource generator from generate.es6
+* Fixes model generator to use scaffold-model so that it always uses top level model folder with pods structure. Removes resource generator as I don't like what it creates and do not want to override it
+* Add download rank badge
+
 ## v2.2.0 | 2016-03-09
 * adds --cache-min to install command for api/frontend. Reduces new command time by ~50%
 
@@ -130,6 +138,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
