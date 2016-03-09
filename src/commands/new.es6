@@ -1,9 +1,13 @@
-/*eslint no-undefined:0 */
+/*eslint no-undefined:0*/
+/*eslint quote-props:0*/
+/*eslint quotes:0*/
+
 const bower = require('bower');
 const join = require('path').join;
 const copy = require('fs-extra').copySync;
 const child = require('child_process');
 const spawnSync = child.spawnSync;
+const fs = require('fs');
 
 module.exports = function(cli) {
   const appName = cli.args[1];
@@ -27,9 +31,14 @@ module.exports = function(cli) {
 
   var bootstrapApp = function() {
     cli.debug('bootstrapApp');
+    const rc = {
+      "apps": {"sails": [{"name": "api", "port": 1776}], "ember": [{"name": "frontend", "port": 4200}]},
+      "debug": false,
+      "version": cli.package.version
+    };
 
     copy(join(templatesPath, 'gitignore'), join(appDir, '.gitignore'));
-    copy(join(templatesPath, 'seedsrc'), join(appDir, '.seedsrc'));
+    fs.writeFileSync(join(appDir, '.seedsrc'), JSON.stringify(rc, null, '\t'));
     copy(join(templatesPath, 'package.json'), join(appDir, 'package.json'), {clobber: true});
 
     spawnSync('npm', ['install'], {cwd: join(cli.cwd, appName)});
