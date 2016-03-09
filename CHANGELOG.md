@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.2.0 | 2016-03-09
+* adds --cache-min to install command for api/frontend. Reduces new command time by ~50%
+
 ## v2.1.5 | 2016-03-09
 * reset version number
 * removed extraneous test.txt file
@@ -127,6 +130,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
