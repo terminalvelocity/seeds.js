@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.2.2 | 2016-03-09
+* Update sails version number in the version command's output
+
 ## v2.2.1 | 2016-03-09
 * bump seeds-frontend and backend versions
 * bumps to latest seeds-frontend package
@@ -138,6 +141,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
