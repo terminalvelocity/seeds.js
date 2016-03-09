@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.1.5 | 2016-03-09
+* reset version number
+* removed extraneous test.txt file
+* Updates version numbers in version command and adds version to seedsrc file on seeds new
+* Update Ember to 2.4.1, updates generate-seeds-frontend version to latest version with Ember 2.4.1 templates, remove hardcoded bower deps and replace with a bower install during ember install.
+* Adds lib to git
+
 ## v2.1.4 | 2016-03-06
 * changes templates package.json file to use tilde (minor level matcher) for generators
 
@@ -120,6 +127,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
