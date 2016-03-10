@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.3.0 | 2016-03-09
+* fix error message for db
+* lib/template
+* update seeds-backend package
+* adds db commands to seeds
+
 ## v2.2.2 | 2016-03-09
 * Update sails version number in the version command's output
 
@@ -141,6 +147,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
