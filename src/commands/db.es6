@@ -20,6 +20,6 @@ module.exports = cli => {
 
     cli.runExternalCommand(command, [dbCommands.get(cli.args[1]), ...additionalParams], {cwd: cli.apiDir});
   } else {
-    cli.error('You must be in a Seeds application to run the init command.');
+    cli.error('You must be in a Seeds application to run the db command.');
   }
 };
