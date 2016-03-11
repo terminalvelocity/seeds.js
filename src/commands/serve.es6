@@ -14,7 +14,7 @@ module.exports = cli => {
 
       cli.debug('starting to serve ember => ', app.name);
 
-      let appPath = `/work/tmp/seedstest/test-serve-admin/${app.name}`;
+      let appPath = join(cli.cwd, app.name);
       let port = app.port | 4200;
 
       cli.runExternalCommand(join(cli.nodeDir, '.bin', 'ember'), ['serve', '--port', port, '--live-reload-port', app.reload], {cwd: appPath});
