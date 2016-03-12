@@ -10,18 +10,20 @@ module.exports = cli => {
     cli.runExternalCommand(join(cli.nodeDir, '.bin', 'sails'), ['lift'], {cwd: cli.apiDir});
 
     for (var i = 0; i < cli.config.apps.ember.length; i++) {
-      let app = cli.config.apps.ember[i];
+      const app = cli.config.apps.ember[i];
 
-      cli.debug('starting to serve ember => ', app.name);
+      cli.debug('preparing to serve ember => ', app.name);
 
-      let appPath = join(cli.cwd, app.name);
-      let port = app.port | 4200;
+      const appPath = join(cli.cwd, app.name);
+      const port = app.port | 4200;
+      let args = ['serve', '--port', port];
+      if (app.reloadport) {
+        args.push('--live-reload-port', app.reloadport);
+      }
 
-      cli.runExternalCommand(join(cli.nodeDir, '.bin', 'ember'), ['serve', '--port', port, '--live-reload-port', app.reload], {cwd: appPath});
+      cli.runExternalCommand(join(cli.nodeDir, '.bin', 'ember'), args, {cwd: appPath});
     }
   } else {
     cli.error('You must be in a Seeds application to run the serve command.');
   }
 };
-
-
