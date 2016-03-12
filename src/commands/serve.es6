@@ -17,6 +17,7 @@ module.exports = cli => {
       const appPath = join(cli.cwd, app.name);
       const port = app.port | 4200;
       let args = ['serve', '--port', port];
+
       if (app.reloadport) {
         args.push('--live-reload-port', app.reloadport);
       }
