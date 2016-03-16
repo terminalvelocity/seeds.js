@@ -32,7 +32,8 @@ class SeedsCLI extends Cli {
         ember: [
           {
             name: 'frontend',
-            port: 4200
+            port: 4200,
+            reloadport: 49154
           }
         ]
       },
