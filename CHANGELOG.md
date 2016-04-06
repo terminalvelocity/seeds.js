@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.1 | 2016-04-06
+* Added link to docs to npm
+* runs multiple ember servers. WIP
+
 ## v2.3.0 | 2016-03-09
 * fix error message for db
 * lib/template
@@ -147,6 +151,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
